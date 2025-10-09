@@ -1,15 +1,24 @@
 <script setup>
 //Desde la etiqueta "script" es lenguaje JS
-const nombre = "Paul Romero"
+import Navbar from './components/Navbar.vue';
 </script>
 
 
 <template>
   <!--Desde la etiqueta "TEMPLETE" para abajo es lenguaje HTML-->>
-  <h1>{{ nombre }}</h1>
-  <p>
-    Este es tu antiguo portfolio<a href="https://portfolio-individual.netlify.app/" target="_blank" rel="noopener">Portfolio</a>
-  </p>
+  <header>
+    <!--BARA DE NAVEGACION-->
+    <Navbar />
+    
+  </header>
+  <main>
+    <section id="educacion"><h2>Educacion - Cursos</h2></section>
+    <section id="experiencia"><h2>Experiencia</h2></section>
+    <section id="proyectos"><h2>Proyectos</h2></section>
+    <section id="habilidad"><h2>Habilidades</h2></section>
+    <section id="intereses"><h2>Intereses</h2></section>
+  </main>
+  
 </template>
 
 <style scoped>
