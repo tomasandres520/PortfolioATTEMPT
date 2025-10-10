@@ -1,15 +1,14 @@
 <script setup>
-import { ref } from 'vue'
 const title = "Juan Perez"
-const description = "Tecnico Universitario en la UTN"
+const description = "Tecnico Universitario en Programacion - UTN"
 const residencia = "San Rafael,Mendoza, Argentina"
 const presentacion = "Hola, bienvenido a mi portafolio de proyectos.Soy un desorrallador chiquitito"
-const redesSociales = ref([
-    {id:1 ,name: "Linkeding" ,src: "/src/assets/linkedin_icon.svg" ,url: "" },
-    {id:2 ,name: "Instagram" ,src: "/src/assets/instagram_icon.svg",url: "" },
-    {id:3 ,name: "Github" ,src: "/src/assets/github_icon.svg",url: ""},
-    {id:4 ,name: "Curriculum" ,src: "/src/assets/cv_resume_icon.svg",url:"" }
-])
+const redesSociales = [
+    {id:1, name: "Linkeding", src:"/src/assets/linkedin_icon.svg", url: "" },
+    {id:2, name: "Instagram", src:"/src/assets/instagram_icon.svg", url: "" },
+    {id:3, name: "Github", src:"/src/assets/github_icon.svg", url: "https://github.com/PaulRomero24"},
+    {id:4, name: "Curriculum", src:"/src/assets/cv_resume_icon.svg", url:"" },
+]
 const telefono = "+2130352351"
 </script>
 
@@ -20,8 +19,9 @@ const telefono = "+2130352351"
             <h2>{{ description }}</h2>
             <p>{{ presentacion }}</p>
             <ul class="container-lista">
-                <li v-for= "red in redesSociales" :key="red.id"></li>
-                    <a :href="red.url" img class="icon-redesociales" :src="red.src" width="3.5rem" :alt="red.name"></a>
+                <li v-for= "red in redesSociales" :key="red.id">
+                    <a :href="red.url"><img class="icon-redesociales" :src="red.src" width="35rem" :alt="red.name"></a>
+                  </li>
             </ul>
             <h3>Mi telefono personal : {{ telefono }} </h3>
             <h4>{{ residencia }}</h4>

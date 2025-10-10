@@ -1,7 +1,8 @@
 <script setup>
 //Desde la etiqueta "script" es lenguaje JS
-import DatosPersonales from './components/DatosPersonales.vue';
 import Navbar from './components/Navbar.vue';
+import DatosPersonales from './components/DatosPersonales.vue';
+import Educacion from './Educacion.vue';
 </script>
 
 
@@ -12,7 +13,8 @@ import Navbar from './components/Navbar.vue';
     <Navbar />
     <!-- DATOS PERSONALES -->
     <DatosPersonales />
-
+    <!--EDUCACION-->
+    <Educacion />
   </header>
   <main>
     <section id="educacion">
