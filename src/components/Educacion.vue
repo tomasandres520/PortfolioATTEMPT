@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 
-<!--Plantilla de https://codepen.io/elaleph23/pen/ZNBMJZ y modificada por mi, corregida por IA-->
+<!--Plantilla de https://codepen.io/elaleph23/pen/ZNBMJZ , modificada por mi y corregida por IA-->
 <script setup>
 import { ref, computed } from 'vue';
 

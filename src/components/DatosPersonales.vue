@@ -4,10 +4,10 @@ const description = "Tecnico Universitario en Programacion - UTN"
 const residencia = "San Rafael,Mendoza, Argentina"
 const presentacion = "Hola, bienvenido a mi portafolio de proyectos.Soy un desorrallador chiquitito"
 const redesSociales = [
-    {id:1, name: "Linkeding", src:"/src/assets/linkedin_icon.svg", url: "" },
-    {id:2, name: "Instagram", src:"/src/assets/instagram_icon.svg", url: "" },
-    {id:3, name: "Github", src:"/src/assets/github_icon.svg", url: "https://github.com/PaulRomero24"},
-    {id:4, name: "Curriculum", src:"/src/assets/cv_resume_icon.svg", url:"" },
+    {id:1, name: "Linkeding", src:"/src/assets/svg/linkedin_icon.svg", url: "" },
+    {id:2, name: "Instagram", src:"/src/assets/svg/instagram_icon.svg", url: "" },
+    {id:3, name: "Github", src:"/src/assets/svg/github_icon.svg", url: "https://github.com/PaulRomero24"},
+    {id:4, name: "Curriculum", src:"/src/assets/svg/cv_resume_icon.svg", url:"" },
 ]
 const telefono = "+2130352351"
 </script>

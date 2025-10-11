@@ -12,7 +12,7 @@ const navegacion= ref([
     <nav class="navbar">
         <div class="navbar-menu">
             <ul>
-                <a v-for="nav in navegacion" :key="nav.nombre" href="nav.enlace" class="nav-item">{{ nav.nombre }}</a>
+                <li class="nav-list"><a v-for="nav in navegacion" :key="nav.nombre" :href="nav.enlace" class="nav-item">{{ nav.nombre }}</a></li>
             </ul>
         </div>
     </nav>
@@ -45,7 +45,7 @@ a {
 border: 1px solid;
 border-color: hsla(160,100%,37%,0.2);
 border-radius: 5px;
-  /*Elimina lo subrayado de los enlaces y elementos con clase "green" */ 
+  /*Elimina lo subrayado de los enlaces y elementos con clase "green" */
 text-decoration: none;
 /*Añade transicion para el cambio de estilo*/
 transition: 0.4;
