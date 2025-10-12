@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.vue';
 import DatosPersonales from './components/DatosPersonales.vue';
 import Educacion from './components/Educacion.vue';
 import ExperienciaComp from './components/ExperienciaComp.vue';
+import PreyectosComp from './components/PreyectosComp.vue';
 </script>
 
 
@@ -18,8 +19,8 @@ import ExperienciaComp from './components/ExperienciaComp.vue';
   <main>
     <section id="educacion">
       <h2>Educacion - Cursos</h2>
-          <!--EDUCACION-->
-          <Educacion />
+      <!--EDUCACION-->
+      <Educacion />
     </section>
     <section id="experiencia">
       <h2>Experiencia</h2>
@@ -27,6 +28,7 @@ import ExperienciaComp from './components/ExperienciaComp.vue';
     </section>
     <section id="proyectos">
       <h2>Proyectos</h2>
+      <PreyectosComp />
     </section>
     <section id="habilidad">
       <h2>Habilidades</h2>
