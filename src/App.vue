@@ -5,6 +5,7 @@ import DatosPersonales from './components/DatosPersonales.vue';
 import Educacion from './components/Educacion.vue';
 import ExperienciaComp from './components/ExperienciaComp.vue';
 import PreyectosComp from './components/PreyectosComp.vue';
+import HabilidadesComp from './components/HabilidadesComp.vue';
 </script>
 
 
@@ -32,6 +33,7 @@ import PreyectosComp from './components/PreyectosComp.vue';
     </section>
     <section id="habilidad">
       <h2>Habilidades</h2>
+      <HabilidadesComp />
     </section>
     <section id="intereses">
       <h2>Intereses</h2>
