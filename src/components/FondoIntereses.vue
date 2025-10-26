@@ -1,4 +1,5 @@
 <!-- src/components/AnimatedBackground.vue -->
+<!-- https://codepen.io/nashvail/pen/wpGgXO -->
 <template>
   <div ref="containerRef" class="animated-background"></div>
 </template>
@@ -8,7 +9,7 @@ import { onMounted, onBeforeUnmount, ref } from 'vue';
 
 // Configuración
 const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-const numBalls = 30;
+const numBalls = 20;
 
 // Referencias
 const containerRef = ref(null);
@@ -87,5 +88,7 @@ onBeforeUnmount(() => {
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  background: linear-gradient(135deg, #555572 0%, #12121a 100%);
 }
+
 </style>

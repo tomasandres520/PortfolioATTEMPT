@@ -12,7 +12,8 @@ const intereses = ref([
 
 <template>
   <section class="intereses-contenedor">
-    <!-- Fondo animado (se posiciona en toda la sección) -->
+    <!-- Fondo animado (se posiciona en toda la sección)Elegi un fondo
+    de JS, Con IA me ayude para entenderlo y lo modifique un poco -->
     <FondoIntereses />
 
     <!-- Contenido encima del fondo -->
@@ -29,11 +30,11 @@ const intereses = ref([
 <style scoped>
 .intereses-contenedor {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0f0f15;
   color: white;
   overflow: hidden;
   padding: 0 1rem;
@@ -41,9 +42,13 @@ const intereses = ref([
 
 .contenido-intereses {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* asegura que el texto esté encima de las bolas */
   max-width: 85%;
   width: 100%;
+  /* Opcional: fondo semitransparente para mejor legibilidad
+  background: rgba(10, 10, 16, 0.6); */
+  padding: 1.5rem;
+  border-radius: 16px;
 }
 
 .contenedor-lista {
@@ -51,11 +56,11 @@ const intereses = ref([
   padding: 0;
   margin: 0;
   font-size: 1.4rem;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .item {
   margin-bottom: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 </style>
