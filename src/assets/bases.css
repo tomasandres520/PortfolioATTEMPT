@@ -9,7 +9,7 @@
     --vt-c-black-soft: #222222;
     --vt-c-black-mute: #282828;
 
-    --vt-c-indigo: #2c3e50;
+    --vt-c-indigo: #5b748d;
 
     --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
     --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -68,7 +68,7 @@ body {
     /* Asegura que el body ocupe al menos la altura total de la ventana */
     color: var(--color-text);
     /* Establece el color del texto usando una variable CSS */
-    background: var(--color-background);
+    background: var(--vt-c-indigo);
     /* Establece el color de fondo usando una variable CSS */
     transition:
         color 0.5s,

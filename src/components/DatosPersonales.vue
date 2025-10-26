@@ -1,7 +1,7 @@
 <script setup>
-const title = "Juan Perez"
-const description = "Tecnico Universitario en Programacion - UTN"
-const residencia = "San Rafael,Mendoza, Argentina"
+const title = "Paul Romero"
+const description = "Estudiante de la Universidad Tecnologica Nacional - San Rafael"
+const residencia = "Malargüe,Mendoza, Argentina"
 const presentacion = "Hola, bienvenido a mi portafolio de proyectos.Soy un desorrallador chiquitito"
 const redesSociales = [
     {id:1, name: "Linkeding", src:"/src/assets/svg/linkedin_icon.svg", url: "" },

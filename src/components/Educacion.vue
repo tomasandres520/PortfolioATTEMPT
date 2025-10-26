@@ -26,16 +26,16 @@ const educacion = ref([
     descripcion: "Realicé una pasantía en ABC Solutions, contribuyendo en la creación de interfaces de usuario y optimización de sitios web.",
     url: ""
   },
+    {
+    año: "2022",
+    titulo: "Desarrollador Full Stack",
+    descripcion: "Trabajé en XYZ Tech, donde diseñé y desarrollé aplicaciones web completas utilizando tecnologías como Node.js, React y MongoDB.",
+    url: ""
+  },
   {
     año: "2024",
     titulo: "Graduación",
     descripcion: "Finalicé mis estudios en la UTN - Facultad Regional San Rafael - Mendoza. Incumbencias Profesionales: Operación y programación de computadoras, desarrollo de programas en distintos lenguajes, análisis y control de sistemas informáticos.",
-    url: ""
-  },
-  {
-    año: "2022",
-    titulo: "Desarrollador Full Stack",
-    descripcion: "Trabajé en XYZ Tech, donde diseñé y desarrollé aplicaciones web completas utilizando tecnologías como Node.js, React y MongoDB.",
     url: ""
   },
 ]);
@@ -82,12 +82,13 @@ const imagenPorAño = computed(() => {
   position: relative;
   width: 25%;
   height: 100vh;
-  min-height: 600px;
+  min-height: 480px;
   color: #fff;
   overflow: hidden;
   transition: width 0.5s ease;
-  background-size:cover;
-  background-position: center center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: top center;
   filter: grayscale(100%);
 
   &:before,

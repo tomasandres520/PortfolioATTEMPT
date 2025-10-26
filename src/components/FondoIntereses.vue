@@ -87,7 +87,7 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
   background: linear-gradient(135deg, #555572 0%, #12121a 100%);
 }
 

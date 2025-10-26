@@ -1,11 +1,10 @@
-@import './base.css';
-
 /*Este estilo lo dejamos*/
 #app {
-    max-width: 1280px; /* Establece el ancho máximo del contenedor en 1280px */
+    max-width: 100%; /* Establece el ancho máximo del contenedor en 1280px */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     padding: 2rem; /* Añade un relleno interno de 2rem */
     font-weight: normal; /* Establece el peso de la fuente como normal */
+    background-color: var(--vt-c-indigo);
 }
 
 a {
