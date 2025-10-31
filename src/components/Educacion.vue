@@ -8,7 +8,7 @@ import { ref, computed } from 'vue';
 const imagenes = ref([
   { año: "2017", src: "/src/assets/Imagenes/estudiando.jpg" },
   { año: "2019", src: "/src/assets/Imagenes/desarrollador.jpg" },
-  { año: "2022", src: "/src/assets/Imagenes/desarrollador full.jpg" },
+  { año: "2022", src: "/src/assets/Imagenes/desarrollador_full.jpg" },
   { año: "2024", src: "/src/assets/Imagenes/graduado.jpg" }
 ]);
 

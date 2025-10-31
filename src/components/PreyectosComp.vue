@@ -64,6 +64,7 @@ const proyectos =ref([
   overflow: hidden;
   max-width: 222px;
   flex: 1 1 300px;
+  background:#6acfeb41;
 }
 
 .proyecto-img{

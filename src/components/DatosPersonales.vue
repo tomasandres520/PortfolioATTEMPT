@@ -20,7 +20,7 @@ const telefono = "+2130352351"
             <p>{{ presentacion }}</p>
             <ul class="container-lista">
                 <li v-for= "red in redesSociales" :key="red.id">
-                    <a :href="red.url"><img class="icon-redesociales" :src="red.src" width="35rem" :alt="red.name"></a>
+                    <a :href="red.url" target="_blank"><img class="icon-redesociales" :src="red.src" width="35rem" :alt="red.name"></a>
                   </li>
             </ul>
             <h3>Mi telefono personal : {{ telefono }} </h3>
@@ -40,15 +40,29 @@ p {
     font-weight: 600;
     margin-bottom: 1rem;
 }
+h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h1,h2,h3,h4,p{
+  color: antiquewhite;
+}
 
 .card {
-    background-color: rgb(28, 41, 52);
+    background:linear-gradient(to top right, rgb(28, 41, 52),rgb(147, 174, 197));
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     text-align: center;
+    transition: 10s ease;
 }
-
+.card:hover{
+  background: linear-gradient(rgb(17, 134, 230),rgb(92, 111, 126));
+  transition-timing-function: ease;
+  transition-duration: 3s;
+  /*La transicion no funciona, segun la IA es por los gradientes */
+}
 .container-lista{
     display: flex;
     justify-content: center;
@@ -70,8 +84,5 @@ p {
     background-color: rgb(28, 41, 52);
     box-shadow: 0 0 5px rgba(251, 249, 249, 0.934);
 }
-h3{
-    font-size: 1.2rem;
-    font-weight: 600;
-}
+
 </style>

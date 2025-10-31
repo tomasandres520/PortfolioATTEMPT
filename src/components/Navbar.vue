@@ -24,8 +24,10 @@ const navegacion= ref([
 .navbar{
 background-color: var(--vt-c-indigo);
 columns: #fff;
-padding: 0.5rem 1rem;
+padding: 1.5rem 1.5rem;
 align-items: center;
+font-size: 1.5rem;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .navbar-item{
 color: #fff;
@@ -38,18 +40,19 @@ justify-content: flex-end;
 }
 .nav-list{
 list-style: none;
-padding: 0.5rem;
+padding: 1.5rem;
 }
 a {
-border: 1px solid;
-border-color: hsla(160, 51%, 84%, 0.2);
-border-radius: 5px;
+  color: #22f533;
+border: 3px solid;
+border-color: hsl(165, 7%, 65%);
+border-radius: 12px;
   /*Elimina lo subrayado de los enlaces y elementos con clase "green" */
 text-decoration: none;
 /*Añade transicion para el cambio de estilo*/
 transition: 0.4;
 /*Añade padding alrededor del texto*/
-padding: 5px;
+padding:10px;
 }
 a:hover{
   /*Cambia el color cuando el mouse pasa sobre el elemento */
