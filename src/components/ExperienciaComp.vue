@@ -1,4 +1,11 @@
 <script setup>
+//IMAGENES
+import Ventas from "/src/assets/svg/Ventas.svg"
+import Eccomerce from "/src/assets/svg/Ecommerce.svg"
+import Configuracion from "/src/assets/svg/Configuracion.svg"
+import UiUx from "/src/assets/svg/UiUx.svg"
+import Docker from  "/src/assets/svg/Docker.svg"
+//------------------------
 import { ref } from 'vue';
 
 
@@ -6,19 +13,19 @@ const titulo = "Desarrollador Full Stack"
 const fecha = "Enero 2022 - Julio 2024"
 const listado = ref([
   {item:1,
-    src: "/src/assets/svg/Ventas.svg",
+    src: Ventas,
     parrafo:"Lideré un equipo de 5 desarrolladores en la creación de una plataforma de comercio electrónico que incrementó las ventas en un 35% durante el primer año."},
   {item:2,
-    src: "/src/assets/svg/Ecommerce.svg",
+    src: Eccomerce,
     parrafo:"Diseñé y desarrollé aplicaciones web utilizando Node.js, React y MongoDB, logrando reducir el tiempo de carga de las páginas en un 50%."},
   {item:3,
-    src: "/src/assets/svg/Configuracion.svg",
+    src: Configuracion,
     parrafo:"Implementé soluciones de autenticación y autorización, mejorando la seguridad del sitio web y reduciendo los intentos de acceso no autorizado en un 20%."},
   {item:4,
-    src: "/src/assets/svg/UiUx.svg",
+    src: UiUx,
     parrafo:"Colaboré con diseñadores de UX/UI para crear interfaces de usuario atractivas y fáciles de usar, aumentando la satisfacción del cliente en un 15%."},
   {item:5,
-    src: "/src/assets/svg/Docker.svg",
+    src:Docker,
     parrafo:"Automaticé procesos de despliegue continuo utilizando Jenkins y Docker, reduciendo los tiempos de despliegue en un 40%."},
 
   ])
@@ -73,6 +80,7 @@ const listado = ref([
 
 p{
   color: wheat;
+  text-rendering: optimizeLegibility;
 }
 
 

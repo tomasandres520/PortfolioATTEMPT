@@ -57,6 +57,7 @@ const intereses = ref([
   margin: 0;
   font-size: 1.4rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-rendering: optimizeLegibility;
 }
 
 .item {

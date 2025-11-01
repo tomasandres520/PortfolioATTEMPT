@@ -22,10 +22,10 @@ const navegacion= ref([
 
 <style scoped>
 .navbar{
+flex-wrap: wrap;
 background-color: var(--vt-c-indigo);
-columns: #fff;
 padding: 1.5rem 1.5rem;
-align-items: center;
+justify-content: space-between;
 font-size: 1.5rem;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -43,7 +43,7 @@ list-style: none;
 padding: 1.5rem;
 }
 a {
-  color: #22f533;
+  color: rgb(111, 250, 123);
 border: 3px solid;
 border-color: hsl(165, 7%, 65%);
 border-radius: 12px;
@@ -60,11 +60,47 @@ background-color: hsla(160, 95%, 78%, 0.747);
 color: black;
 }
 
-@media (max-width: 768px){
-.navbar-menu{
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     width: 100%;
-}
+    padding: 0.5rem 0 0;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-list li {
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+
+  .navbar-item {
+    font-size: 1.1rem; /* Ajustado para móvil */
+    width: 100%;
+    max-width: none;
+    margin-right: 0; /* Elimina el margen de desktop */
+  }
+
+  a {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
 }
 </style>

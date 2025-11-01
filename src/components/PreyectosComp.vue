@@ -1,22 +1,27 @@
 <script setup>
+//IMAGENES
+import Individual from "/src/assets/Proyectos/Profile.jpeg"
+import Grupal from "/src/assets/Proyectos/Portfolio-web.jpeg"
+import Integrador from "/src/assets/Proyectos/Proyecto-Integrador.jpg"
+
 import { ref } from 'vue';
 
 const proyectos =ref([
   {item:1,
-    src:"/src/assets/Proyectos/Profile.jpeg",
+    src:Individual,
     titulo:"Portfolio Individual",
     parrafo:"Portafolio individual Basico",
     links:"https://portfolio-individual.netlify.app",
     nombre:"Portfolio Individual"},
   {item:2,
-    src:"/src/assets/Proyectos/Portfolio-web.jpeg",
+    src:Grupal,
     titulo:"Portfolio Grupal",
     parrafo:"Portfolio Grupal Basico",
     links:"https://portfolio-grupal.netlify.app",
     nombre:"Portfolio Grupal"
   },
   {item:3,
-    src:"/src/assets/Proyectos/Proyecto-Integrador.jpg",
+    src:Integrador,
     titulo:"Proyecto Integrador en Pseint",
     parrafo:"Proyecto Integrador escrito en lenguaje de PSEINT",
     links:"https://drive.google.com/file/d/1Kb3sXs1RuYLlRvIxbT8xeqO0D_MLss6m/view?usp=sharing",

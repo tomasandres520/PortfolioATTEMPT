@@ -1,3 +1,6 @@
+<!-- Portfolio Creado a partir de las clases de UTN- Modificado por mi, y corregido con ayuda de la IA-->
+
+
 <script setup>
 //Desde la etiqueta "script" es lenguaje JS
 import Navbar from './components/Navbar.vue';
@@ -56,6 +59,16 @@ footer{
   align-items: center;
   padding: 2rem;
   font-size: 1.3rem;
+  font-family: 'Courier New', Courier, monospace;
   color: aliceblue;
 }
+
+footer a{
+  color: black;
+  border: 7px solid;
+  border-radius: 14px;
+  border-color: rgb(22, 63, 99);
+  background-color: rgb(194, 220, 243);
+}
+
 </style>

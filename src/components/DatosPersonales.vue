@@ -1,13 +1,19 @@
 <script setup>
+//IMPORT DE IMAGENES
+import Linkeding  from "/src/assets/svg/linkedin_icon.svg";
+import Instagram from "/src/assets/svg/instagram_icon.svg";
+import Github from"/src/assets/svg/github_icon.svg";
+import Curriculum from "/src/assets/svg/cv_resume_icon.svg";
+//-----------
 const title = "Paul Romero"
 const description = "Estudiante de la Universidad Tecnologica Nacional - San Rafael"
 const residencia = "Malargüe,Mendoza, Argentina"
 const presentacion = "Hola, bienvenido a mi portafolio de proyectos.Soy un desorrallador chiquitito"
 const redesSociales = [
-    {id:1, name: "Linkeding", src:"/src/assets/svg/linkedin_icon.svg", url: "" },
-    {id:2, name: "Instagram", src:"/src/assets/svg/instagram_icon.svg", url: "" },
-    {id:3, name: "Github", src:"/src/assets/svg/github_icon.svg", url: "https://github.com/PaulRomero24"},
-    {id:4, name: "Curriculum", src:"/src/assets/svg/cv_resume_icon.svg", url:"" },
+    {id:1, name: "Linkeding", src:Linkeding, url: "" },
+    {id:2, name: "Instagram", src:Instagram, url: "" },
+    {id:3, name: "Github", src:Github, url: "https://github.com/PaulRomero24"},
+    {id:4, name: "Curriculum", src:Curriculum, url:"" },
 ]
 const telefono = "+2130352351"
 </script>
@@ -31,38 +37,50 @@ const telefono = "+2130352351"
 
 <style scoped>
 
-h1{
-    font-size: 2.5rem;
-}
-
-p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-h3{
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-h1,h2,h3,h4,p{
-  color: antiquewhite;
-}
 
 .card {
-    background:linear-gradient(to top right, rgb(28, 41, 52),rgb(147, 174, 197));
+    position: relative;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     text-align: center;
-    transition: 10s ease;
+    transition: width 0.5 ease;
+}
+.card::before,.card::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card::after{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  background: rgba(224, 37, 27, 0.15);
+}
+.card::before{
+  background:linear-gradient(
+  to top right, rgb(28, 41, 52),
+  rgb(147, 174, 197));
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .card:hover{
   background: linear-gradient(rgb(17, 134, 230),rgb(92, 111, 126));
-  transition-timing-function: ease;
-  transition-duration: 3s;
-  /*La transicion no funciona, segun la IA es por los gradientes */
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
 }
+  .card:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease 0.25s;
+  }
+
+
 .container-lista{
     display: flex;
     justify-content: center;
@@ -83,6 +101,25 @@ h1,h2,h3,h4,p{
 .icon-redsocial:hover{
     background-color: rgb(28, 41, 52);
     box-shadow: 0 0 5px rgba(251, 249, 249, 0.934);
+}
+h1{
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h1,h2,h3,h4,p{
+  color: antiquewhite;
+  position: relative;
+  z-index: 1;
 }
 
 </style>

@@ -1,33 +1,57 @@
-/*Este estilo lo dejamos*/
+/* Estilos base */
 #app {
-    max-width: 100%; /* Establece el ancho máximo del contenedor en 1280px */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 2rem; /* Añade un relleno interno de 2rem */
-    font-weight: normal; /* Establece el peso de la fuente como normal */
-    background-color: var(--vt-c-indigo);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  background-color: var(--vt-c-indigo);
+  box-sizing: border-box; /* Incluye padding/border en el ancho */
 }
 
 a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: var(--vt-c-white); /* Establece el color del enlace usando una variable CSS */
+  text-decoration: none;
+  color: var(--vt-c-white);
 }
 
-
-
-/*Agregaremos esta media query pensando en el responsivo desde ahora por esta regla:*/
-
+/* Responsivo: tablets y móviles */
 @media (max-width: 768px) {
-#app {
-    display: flex; /* Aplica un diseño flexible al contenedor */
-    flex-direction: column; /* Organiza los elementos en una columna */
-    font-size: small; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-    }
+  #app {
+    padding: 1rem; /* Menos padding en móviles */
+    font-size: 0.9rem; /* Más legible que "small" */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Ajusta títulos */
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p, h3, h4 {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 12px; /* Un poco más compacto */
+    margin: 8px;
+  }
+
+  .container-lista {
+    flex-wrap: wrap; /* Permite que los íconos se ajusten en varias filas si es necesario */
+  }
+
+  .icon-redsocial {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+  }
 }
 
+/* Opcional: pantallas grandes */
 @media (min-width: 1024px) {
-#app {
-    display: flex; /* Aplica un diseño flexible al contenedor */
-    flex-direction: column; /* Organiza los elementos en una columna */
-    width: 80%; /* Limita el ancho del contenedor al 80% de la pantalla en dispositivos grandes */
-    }
+  #app {
+    width: 90%; /* No necesitas display:flex aquí si no lo usas */
+    padding: 2.5rem;
+  }
 }
