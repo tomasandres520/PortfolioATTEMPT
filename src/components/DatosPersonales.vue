@@ -5,17 +5,16 @@ import Instagram from "/src/assets/svg/instagram_icon.svg";
 import Github from"/src/assets/svg/github_icon.svg";
 import Curriculum from "/src/assets/svg/cv_resume_icon.svg";
 //-----------
-const title = "Paul Romero"
-const description = "Estudiante de la Universidad Tecnologica Nacional - San Rafael"
-const residencia = "Malargüe,Mendoza, Argentina"
-const presentacion = "Hola, bienvenido a mi portafolio de proyectos.Soy un desorrallador chiquitito"
+const title = "QWERTY1234"
+const description = "Estudiantes de la Universidad Tecnologica Nacional - San Rafael"
+const residencia = " Argentina"
+const presentacion = "Hola, bienvenido a nuestro portfolio grupal de proyectos."
 const redesSociales = [
     {id:1, name: "Linkeding", src:Linkeding, url: "" },
     {id:2, name: "Instagram", src:Instagram, url: "" },
     {id:3, name: "Github", src:Github, url: "https://github.com/PaulRomero24"},
     {id:4, name: "Curriculum", src:Curriculum, url:"" },
 ]
-const telefono = "+2130352351"
 </script>
 
 <template>
@@ -29,7 +28,6 @@ const telefono = "+2130352351"
                     <a :href="red.url" target="_blank"><img class="icon-redesociales" :src="red.src" width="35rem" :alt="red.name"></a>
                   </li>
             </ul>
-            <h3>Mi telefono personal : {{ telefono }} </h3>
             <h4>{{ residencia }}</h4>
         </div>
     </section>

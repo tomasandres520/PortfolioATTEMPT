@@ -5,11 +5,11 @@
 //Desde la etiqueta "script" es lenguaje JS
 import Navbar from './components/Navbar.vue';
 import DatosPersonales from './components/DatosPersonales.vue';
-import Educacion from './components/Educacion.vue';
 import ExperienciaComp from './components/ExperienciaComp.vue';
 import PreyectosComp from './components/PreyectosComp.vue';
 import HabilidadesComp from './components/HabilidadesComp.vue';
 import InteresComp from './components/InteresComp.vue';
+import EstudiantesComp from './EstudiantesComp.vue';
 
 </script>
 
@@ -23,10 +23,10 @@ import InteresComp from './components/InteresComp.vue';
     <DatosPersonales />
   </header>
   <main>
-    <section id="educacion">
+    <section id="estudiantes">
       <h2>Educacion - Cursos</h2>
-      <!--EDUCACION-->
-      <Educacion />
+      <!--Aqui cambiaria esta seccion por el card.animated-->
+      <EstudiantesComp />
     </section>
     <section id="experiencia">
       <h2>Experiencia</h2>
