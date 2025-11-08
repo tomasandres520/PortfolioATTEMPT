@@ -36,8 +36,8 @@ const intereses = ref([
   align-items: center;
   justify-content: center;
   color: white;
-  overflow: hidden;
-  padding: 0 1rem;
+  /* ✅ Clave: asegurar que el contenedor tenga contexto de apilamiento */
+  z-index: 0; /* opcional, pero ayuda */
 }
 
 .contenido-intereses {

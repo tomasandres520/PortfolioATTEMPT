@@ -1,94 +1,32 @@
-<!-- src/components/AnimatedBackground.vue -->
-<!-- https://codepen.io/nashvail/pen/wpGgXO -->
 <template>
-  <div ref="containerRef" class="animated-background"></div>
+  <div class="fondo-intereses-gradient"></div>
 </template>
 
-<script setup>
-import { onMounted, onBeforeUnmount, ref } from 'vue';
-
-// Configuración
-const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-const numBalls = 20;
-
-// Referencias
-const containerRef = ref(null);
-const balls = ref([]);
-
-// Limpiar animaciones y elementos
-const cleanup = () => {
-  balls.value.forEach(({ el, animation }) => {
-    animation?.cancel();
-    el?.remove();
-  });
-  balls.value = [];
-};
-
-// Crear bolas
-const createBalls = () => {
-  if (!containerRef.value) return;
-
-  for (let i = 0; i < numBalls; i++) {
-    const ball = document.createElement('div');
-    ball.classList.add('ball');
-
-    // Estilos
-    Object.assign(ball.style, {
-      position: 'absolute',
-      borderRadius: '50%',
-      background: colors[Math.floor(Math.random() * colors.length)],
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      width: `${(Math.random() * 3 + 0.5)}vw`,
-      height: `${(Math.random() * 3 + 0.5)}vw`,
-      opacity: '0.6',
-      pointerEvents: 'none'
-    });
-
-    containerRef.value.appendChild(ball);
-
-    // Animación
-    const toX = Math.random() * (i % 2 === 0 ? -8 : 8); // vw
-    const toY = Math.random() * 10; // vh
-
-    const animation = ball.animate(
-      [
-        { transform: 'translate(0, 0)' },
-        { transform: `translate(${toX}vw, ${toY}vh)` }
-      ],
-      {
-        duration: (Math.random() + 1) * 3000,
-        direction: 'alternate',
-        fill: 'both',
-        iterations: Infinity,
-        easing: 'ease-in-out'
-      }
-    );
-
-    balls.value.push({ el: ball, animation });
-  }
-};
-
-// Ciclo de vida
-onMounted(() => {
-  createBalls();
-});
-
-onBeforeUnmount(() => {
-  cleanup();
-});
-</script>
-
 <style scoped>
-.animated-background {
+.fondo-intereses-gradient {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: 1;
-  background: linear-gradient(135deg, #555572 0%, #12121a 100%);
+  z-index: 0;
+
+  /* 🌊 Gradiente animado: azul UTN + cian Evervault */
+  background: linear-gradient(125deg, #0c4a6e, #0f766e, #0ea5e9, #8b5cf6);
+  background-size: 300% 300%;
+
+  /* ✨ Animación sutil de flujo */
+  animation: gradientFlow 15s ease infinite;
+
+  /* ✅ Suavizado visual */
+  filter: blur(30px);
+  opacity: 0.75;
 }
 
+/* 🌀 Animación de flujo continuo */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 </style>

@@ -111,6 +111,15 @@ const projects = [
     number: 'PORTFOLIO',
     expiry: 'Expiracion:12/26',
   },
+    {
+  id: 5,
+  title: 'Fernando Adaro',
+  portfolio: "https://portafolio-vuejs-personal.netlify.app/",
+  image: new URL('@/assets/Proyectos/Fernando-Adaro.png', import.meta.url).href,
+  holder: 'FERNANDO ADARO',
+  number: 'PORTFOLIO',
+  expiry: 'Expiracion:12/26',
+},
 ]
 
 // ── Estado
@@ -257,14 +266,30 @@ let rafId: number | null = null
 
 const animate = () => {
   if (isAnimating.value && !isDragging.value) {
-    const dt = 1 / 60
+    const dt = 1 / 60 // ~60fps
     position.value += velocity.value * direction.value * dt
 
+    // 🔁 Recalcular dinámicamente dimensiones
     const containerWidth = window.innerWidth
-    const cardLineWidth = cards.value.length * (400 + 60)
-    if (position.value < -cardLineWidth) position.value = containerWidth
-    if (position.value > containerWidth) position.value = -cardLineWidth
+    const cardWidth = 400
+    const gap = 60
+    const cardCount = cards.value.length
+    const cardLineWidth = cardCount * (cardWidth + gap)
 
+    // 🔄 Loop infinito: cuando sale por la izquierda, vuelve por la derecha (y viceversa)
+    if (direction.value === -1) {
+      // Moviendo a la izquierda → cuando la última tarjeta sale por la izquierda
+      if (position.value + cardLineWidth < 0) {
+        position.value = containerWidth
+      }
+    } else {
+      // Moviendo a la derecha → cuando la primera tarjeta sale por la derecha
+      if (position.value > containerWidth) {
+        position.value = -cardLineWidth
+      }
+    }
+
+    // Aplicar transform
     if (cardLineRef.value) {
       cardLineRef.value.style.transform = `translateX(${position.value}px)`
     }
@@ -626,6 +651,132 @@ onUnmounted(() => {
 
 .inspiration-credit a:hover {
   color: #ff7a7c;
+}
+
+/* 📱 Responsive para móvil */
+@media (max-width: 768px) {
+  .card-stream-section {
+    min-height: 280px;
+    margin: 1rem 0;
+  }
+
+  .section-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .controls {
+    top: 10px;
+    left: 10px;
+    gap: 8px;
+  }
+
+  .control-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+
+  .speed-indicator {
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 16px;
+  }
+
+  .card-stream {
+    height: 140px; /* más compacto */
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+
+  .card-wrapper {
+    width: 320px;
+    height: 200px;
+  }
+
+  .card-image {
+    filter: brightness(1.05) contrast(1.05);
+  }
+
+  .card-info {
+    bottom: 12px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .card-holder,
+  .card-expiry {
+    font-size: 12px;
+  }
+
+  .card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 2px 0;
+  }
+
+  .card-logo {
+    top: 15px;
+    right: 15px;
+    font-size: 16px;
+  }
+
+  .card-chip {
+    top: 15px;
+    left: 15px;
+    width: 32px;
+    height: 24px;
+  }
+
+  .contactless {
+    top: 50px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ascii-content {
+    font-size: 9px;
+    line-height: 11px;
+    padding: 8px;
+  }
+
+  /* Scanner más delgado */
+  .scanner {
+    width: 3px;
+    height: 220px;
+  }
+
+  .scanner-label {
+    font-size: 10px;
+    bottom: -30px;
+  }
+
+  .inspiration-credit {
+    font-size: 10px;
+    bottom: 10px;
+  }
+}
+
+/* 📱 Extra compacto (hasta 480px) */
+@media (max-width: 480px) {
+  .card-stream {
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .card-wrapper {
+    width: 280px;
+    height: 175px;
+  }
+
+  .section-intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .controls, .speed-indicator {
+    display: none; /* Opcional: ocultar controles en móvil pequeño */
+  }
 }
 </style>
 

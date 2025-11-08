@@ -24,7 +24,7 @@ import EstudiantesComp from './EstudiantesComp.vue';
   </header>
   <main>
     <section id="estudiantes">
-      <h2>Educacion - Cursos</h2>
+      <h2>Estudiantes</h2>
       <!--Aqui cambiaria esta seccion por el card.animated-->
       <EstudiantesComp />
     </section>
@@ -47,7 +47,7 @@ import EstudiantesComp from './EstudiantesComp.vue';
   </main>
   <footer>
     <a href="#top">Inicio</a>
-    <p>2025 Paul Romero - Portfolio web - tutorial UTN FRSR</p>
+    <p>2025 QWERTY1234 - Portfolio Grupal web - tutorial UTN FRSR</p>
   </footer>
 </template>
 
@@ -59,8 +59,9 @@ footer{
   align-items: center;
   padding: 2rem;
   font-size: 1.3rem;
-  font-family: 'Courier New', Courier, monospace;
-  color: aliceblue;
+  font-family:sans-serif;
+  color: rgb(0, 132, 255);
+  font-weight: bolder;
 }
 
 footer a{

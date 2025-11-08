@@ -2,7 +2,7 @@
 /*Dejaremos los rot para crear las variables globales del color, yo las dejo por defecto*/
 :root {
     --vt-c-white: #ffffff;
-    --vt-c-white-soft: #f8f8f8;
+    --vt-c-gray-soft: #b6b3b3b6;
     --vt-c-white-mute: #f2f2f2;
 
     --vt-c-black: #181818;
@@ -55,9 +55,9 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing:border-box;
     /* Incluye padding y borde dentro del tamaño total del elemento */
-    margin: 0;
+    margin: 0 auto;
     /* Elimina los márgenes predeterminados */
     font-weight: normal;
     /* Establece el peso de la fuente como normal */
@@ -68,7 +68,7 @@ body {
     /* Asegura que el body ocupe al menos la altura total de la ventana */
     color: var(--color-text);
     /* Establece el color del texto usando una variable CSS */
-    background: var(--vt-c-indigo);
+    background: var(--vt-c-gray-soft);
     /* Establece el color de fondo usando una variable CSS */
     transition:
         color 0.5s,
@@ -119,6 +119,7 @@ li {
 /*Agregado en el capitulo 5*/
 /*Estas son las reglas globales de la etiqueta section del main en App.vue*/
 section {
+    width: 100%;
     padding: 2rem;
     border-bottom: 1px solid #ccc;
     margin: 3rem 0rem 2rem 0rem;
@@ -126,9 +127,11 @@ section {
 
 section h2 {
     font-size: 2rem;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     margin-bottom: 1.5rem;
     text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 section h3 {

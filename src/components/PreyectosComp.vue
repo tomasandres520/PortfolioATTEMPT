@@ -1,6 +1,5 @@
 <script setup>
 //IMAGENES
-import Individual from "/src/assets/Proyectos/Profile.jpeg"
 import Grupal from "/src/assets/Proyectos/Portfolio-web.jpeg"
 import Integrador from "/src/assets/Proyectos/Proyecto-Integrador.jpg"
 
@@ -8,24 +7,32 @@ import { ref } from 'vue';
 
 const proyectos =ref([
   {item:1,
-    src:Individual,
-    titulo:"Portfolio Individual",
-    parrafo:"Portafolio individual Basico",
-    links:"https://portfolio-individual.netlify.app",
-    nombre:"Portfolio Individual"},
-  {item:2,
     src:Grupal,
-    titulo:"Portfolio Grupal",
+    titulo:"CODIGO COLECTIVO",
     parrafo:"Portfolio Grupal Basico",
     links:"https://portfolio-grupal.netlify.app",
     nombre:"Portfolio Grupal"
   },
-  {item:3,
+  {item:2,
     src:Integrador,
-    titulo:"Proyecto Integrador en Pseint",
+    titulo:" CODIGO COLECTIVO",
     parrafo:"Proyecto Integrador escrito en lenguaje de PSEINT",
     links:"https://drive.google.com/file/d/1Kb3sXs1RuYLlRvIxbT8xeqO0D_MLss6m/view?usp=sharing",
   nombre:"Proyecto Integrador"
+},
+  {item:3,
+    src:Integrador,
+    titulo:" QWERTY1234",
+    parrafo:"Proyecto Integrador escrito en lenguaje de PSEINT",
+    links:"https://www.youtube.com/watch?v=zhQES1IIQgM",
+  nombre:"Proyecto Integrador"
+},
+{item:4,
+  src:Grupal,
+  titulo:" QWERTY1234",
+  parrafo:"Portfolio grupal basico",
+  links:"https://portafolio-grupal-qwerty-123.netlify.app/",
+  nombre:"Portfolio Grupal"
 },
 ])
 </script>
@@ -54,7 +61,7 @@ const proyectos =ref([
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  background-image: url('/src/assets/Proyectos/BackGround.jpg');
+  background-image: url('/src/assets/Proyectos/BG-2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,7 +76,7 @@ const proyectos =ref([
   overflow: hidden;
   max-width: 222px;
   flex: 1 1 300px;
-  background:#6acfeb41;
+  background:#ecfbff91;
 }
 
 .proyecto-img{
@@ -81,7 +88,7 @@ const proyectos =ref([
 .proyecto-info{
   padding: 15px;
   text-align: center;
-  color: #ffffff;
+  color: #e0c4e7;
   font-size: 23px;
   font-style: italic;
 }
@@ -89,12 +96,12 @@ const proyectos =ref([
 .proyecto-info h3{
   margin: 10px 0;
   font-size: 1.3em;
-  color: aliceblue;
+  color: rgb(0, 85, 241);
 }
 .proyecto-info p{
   margin: 10px 0;
   font-size: 1em;
-  color: aliceblue;
+  color: rgb(0, 85, 241);
 
 }
 .proyecto-links {
@@ -106,7 +113,7 @@ const proyectos =ref([
 
 .proyecto-links a {
   text-decoration: solid;
-  color: gold;
+  color: rgb(255, 230, 0);
   font-size: 1em;
 }
 </style>

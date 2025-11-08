@@ -8,12 +8,12 @@ import Curriculum from "/src/assets/svg/cv_resume_icon.svg";
 const title = "QWERTY1234"
 const description = "Estudiantes de la Universidad Tecnologica Nacional - San Rafael"
 const residencia = " Argentina"
-const presentacion = "Hola, bienvenido a nuestro portfolio grupal de proyectos."
+const presentacion = "Hola, bienvenido a nuestro portfolio grupal de proyectos || Somos la fusion de: 'Codigo Colectivo' y 'Qwerty1234'"
 const redesSociales = [
-    {id:1, name: "Linkeding", src:Linkeding, url: "" },
-    {id:2, name: "Instagram", src:Instagram, url: "" },
-    {id:3, name: "Github", src:Github, url: "https://github.com/PaulRomero24"},
-    {id:4, name: "Curriculum", src:Curriculum, url:"" },
+  { id:1, name: "LinkedIn", src: Linkeding, url:"https://linkedin.com/in/tu-perfil", enabled: true },
+  { id:2, name: "Instagram", src: Instagram, url:"https://instagram.com/tu-usuario", enabled: true },
+  { id:3, name: "GitHub", src: Github, url:"https://github.com/HotCode2025/Qwerty123_Segundo_Semestre", enabled: true },
+  { id:4, name: "Curriculum", src: Curriculum, url: "/cv.pdf", enabled: true },
 ]
 </script>
 
@@ -23,19 +23,32 @@ const redesSociales = [
             <h1>{{ title }}</h1>
             <h2>{{ description }}</h2>
             <p>{{ presentacion }}</p>
-            <ul class="container-lista">
-                <li v-for= "red in redesSociales" :key="red.id">
-                    <a :href="red.url" target="_blank"><img class="icon-redesociales" :src="red.src" width="35rem" :alt="red.name"></a>
-                  </li>
+              <ul class="container-lista">
+                <li v-for="red in redesSociales" :key="red.id" class="red-item">
+                  <a
+                  v-if="red.url"
+                  :href="red.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link"
+                  >
+                    <img
+                    class="icon-redsocial"
+                    :src="red.src"
+                    :alt="red.name"
+                    width="35"
+                    height="35"
+                  />
+                </a>
+              </li>
             </ul>
-            <h4>{{ residencia }}</h4>
+            <p>{{ residencia }}</p>
         </div>
     </section>
 </template>
 
+
 <style scoped>
-
-
 .card {
     position: relative;
     border-radius: 10px;
@@ -54,14 +67,16 @@ const redesSociales = [
 }
 .card::after{
   opacity: 1;
+  z-index: 10;
   transition: opacity 0.5s ease;
   background: rgba(224, 37, 27, 0.15);
+  pointer-events: none;
 }
 .card::before{
   background:linear-gradient(
   to top right, rgb(28, 41, 52),
   rgb(147, 174, 197));
-  z-index: 1;
+  z-index: -1;
   opacity: 0;
   transform: translateY(50%);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -79,27 +94,50 @@ const redesSociales = [
   }
 
 
-.container-lista{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+.container-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  gap: 0; /* ← clave: 0px entre íconos */
+  z-index: 25;
 }
 
-.icon-redsocial{
-    align-items: center;
-    background-color: aliceblue;
-    border-radius: 50%;
-    padding: 2px;
-    margin: 5px;
-    box-shadow: 0 0 5px rgba(95, 124, 205, 0.934);
+/* ✅ Eliminar márgenes/paddings por defecto de <li> */
+.red-item {
+  margin: 0;
+  padding: 0;
 }
-.icon-redsocial:hover{
-    background-color: rgb(28, 41, 52);
-    box-shadow: 0 0 5px rgba(251, 249, 249, 0.934);
+
+/* ✅ Enlace: sin padding extra, solo el necesario para clic */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;   /* igual para todos */
+  height: 40px;  /* igual para todos */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
+
+.icon-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Ícono: centrado y sin márgenes */
+.icon-redsocial {
+  width: 30px;
+  height: 30px;
+  filter: brightness(1);
+  transition: filter 0.2s;
+}
+.icon-link:hover .icon-redsocial {
+  filter: brightness(1.3);
+}
+
 h1{
     font-size: 2.5rem;
 }
@@ -115,7 +153,7 @@ h3{
 }
 
 h1,h2,h3,h4,p{
-  color: antiquewhite;
+  color: black;
   position: relative;
   z-index: 1;
 }

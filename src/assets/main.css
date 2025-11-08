@@ -1,10 +1,10 @@
 /* Estilos base */
 #app {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
-  background-color: var(--vt-c-indigo);
+  background-color: var(--vt-c-gray-soft);
   box-sizing: border-box; /* Incluye padding/border en el ancho */
 }
 
@@ -36,18 +36,7 @@ a {
     padding: 12px; /* Un poco más compacto */
     margin: 8px;
   }
-
-  .container-lista {
-    flex-wrap: wrap; /* Permite que los íconos se ajusten en varias filas si es necesario */
-  }
-
-  .icon-redsocial {
-    width: 30px;
-    height: 30px;
-    margin: 4px;
-  }
 }
-
 /* Opcional: pantallas grandes */
 @media (min-width: 1024px) {
   #app {
