@@ -40,7 +40,7 @@ const proyectos =ref([
 <template>
   <section class="galeria">
     <div class="proyecto" v-for="proyecto in proyectos" :key="proyecto.item">
-      <img class="proyecto-img" :src="proyecto.src" :alt="'Imagen del proyecto ${proyecto.titulo}'">
+      <img class="proyecto-img" :src="proyecto.src" :alt="`Imagen del proyecto ${proyecto.titulo}`">
         <div class="proyecto-info">
           <h3>{{ proyecto.titulo }}</h3>
           <p>{{ proyecto.parrafo }}</p>
@@ -54,56 +54,78 @@ const proyectos =ref([
 
 
 <style scoped>
+/* =======================================
+   ESTILOS ADAPTADOS A DISEÑO OSCURO
+   ======================================= */
+
+/* Contenedor principal de la galería */
 .galeria{
   width: 100%;
-  height: 75%;
+  padding: 40px 20px; /* Se añade padding para separar de los bordes */
+  min-height: 75vh;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px; /* Se aumenta un poco la separación entre tarjetas */
   justify-content: center;
-  background-image: url('/src/assets/Proyectos/BG-2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 12px;
+
+  /* 🛑 ELIMINACIÓN DE IMAGEN DE FONDO Y DEFINICIÓN DEL FONDO OSCURO */
+  background-image: none;
+  background-color: #1a202c; /* Fondo muy oscuro para la sección */
+  /* Se eliminan las propiedades background-size, background-position, background-repeat */
+  border-radius: 0; /* Generalmente se quita el border-radius del contenedor principal */
 }
 
+/* Tarjeta de Proyecto */
 .proyecto{
   display: flex;
   flex-direction: column;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  /* 🎨 Colores de tarjeta */
+  background-color: #2d3748; /* Un gris oscuro más claro para el fondo de la tarjeta */
+  border: 1px solid #4a5568; /* Borde sutil */
+  border-radius: 12px;
   overflow: hidden;
-  max-width: 222px;
-  flex: 1 1 300px;
-  background:#ecfbff91;
+  max-width: 300px; /* Límite de ancho para mejor visualización */
+  flex: 1 1 250px; /* Flexibilidad de crecimiento y encogimiento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+  transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
 
 .proyecto-img{
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit:cover;
+  object-fit: cover;
+  border-bottom: 1px solid #4a5568; /* Separación visual de la imagen */
 }
 
+/* Información del Proyecto (Texto) */
 .proyecto-info{
   padding: 15px;
   text-align: center;
-  color: #e0c4e7;
-  font-size: 23px;
-  font-style: italic;
+  color: #e2e8f0; /* Texto claro principal */
+  font-size: 1em;
+  font-style: normal; /* Se quita el italic, a menos que sea intencional */
+  flex-grow: 1; /* Permite que la información ocupe el espacio restante */
 }
 
 .proyecto-info h3{
-  margin: 10px 0;
-  font-size: 1.3em;
-  color: rgb(0, 85, 241);
+  margin: 0 0 5px 0;
+  font-size: 1.4em;
+  color: #63b3ed; /* Azul claro para el título */
+  font-weight: bold;
 }
-.proyecto-info p{
-  margin: 10px 0;
-  font-size: 1em;
-  color: rgb(0, 85, 241);
 
+.proyecto-info p{
+  margin: 5px 0 15px 0;
+  font-size: 0.9em;
+  color: #cbd5e0; /* Gris más claro para el párrafo */
 }
+
+/* Contenedor de Enlaces */
 .proyecto-links {
   display: flex;
   flex-direction: column;
@@ -111,9 +133,31 @@ const proyectos =ref([
   margin-top: 10px;
 }
 
+/* Estilo del Enlace */
 .proyecto-links a {
-  text-decoration: solid;
-  color: rgb(255, 230, 0);
+  display: inline-block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #1a202c; /* Texto oscuro para contraste */
+  background-color: #48bb78; /* Verde brillante/claro para el botón */
   font-size: 1em;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.proyecto-links a:hover {
+  background-color: #38a169; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Media Query opcional para hacer las tarjetas más grandes en móvil */
+@media (max-width: 600px) {
+  .galeria {
+    padding: 20px 10px;
+  }
+  .proyecto {
+    max-width: 90%; /* Ocupa más ancho en móvil */
+    flex: 1 1 90%;
+  }
 }
 </style>

@@ -1,106 +1,114 @@
-<!-- eslint-disable vue/multi-word-component-names -->
+// eslint-disable-next-line vue/multi-word-component-names
 <script setup>
 import { ref } from 'vue';
-const navegacion= ref([
-    {id:1,nombre:"Estudiantes",enlace:"#estudiantes"},
-    {id:2,nombre:"Experiencia",enlace:"#experiencia"},
-    {id:3,nombre:"Proyectos",enlace:"#proyectos"},
-    {id:4,nombre:"Habilidades",enlace:"#habilidades"},
+
+// Definición de los enlaces de navegación
+const navegacion = ref([
+        {id: 1, nombre: "Experiencia", enlace: "#experiencia"},
+    {id: 2, nombre: "Proyectos", enlace: "#proyectos"},
+    {id: 3, nombre: "Habilidades", enlace: "#habilidades"},
 ]);
 </script>
+
 <template>
     <nav class="navbar">
         <div class="navbar-menu">
-            <ul>
-                <li class="nav-list"><a v-for="nav in navegacion" :key="nav.nombre" :href="nav.enlace" class="nav-item">{{ nav.nombre }}</a></li>
+            <ul class="nav-list">
+                <li v-for="nav in navegacion" :key="nav.nombre">
+                    <a :href="nav.enlace" class="nav-item">
+                        {{ nav.nombre }}
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 </template>
 
-
-
 <style scoped>
-.navbar{
-flex-wrap: wrap;
-background-color: #9bb3ca ;
-padding: 1.5rem 1.5rem;
-justify-content: space-between;
-font-size: 1.5rem;
-font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.navbar-item{
-color: #fff;
-text-decoration: none;
-margin-right: 1rem;
-}
-.navbar-menu{
-display: flex;
-justify-content: flex-end;
-}
-.nav-list{
-list-style: none;
-padding: 1.5rem;
-}
-a {
-  color: rgb(24, 32, 25);
-border: 3px solid;
-border-color: hsl(165, 44%, 96%);
-border-radius: 12px;
-  /*Elimina lo subrayado de los enlaces y elementos con clase "green" */
-text-decoration: none;
-/*Añade transicion para el cambio de estilo*/
-transition: 0.4;
-/*Añade padding alrededor del texto*/
-padding:10px;
-}
-a:hover{
-  /*Cambia el color cuando el mouse pasa sobre el elemento */
-background-color: hsla(160, 95%, 78%, 0.747);
-color: black;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-menu {
+/* 🎨 Estilos Generales de la Barra */
+.navbar {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0.5rem 0 0;
-    align-items: flex-start;
-  }
+    flex-wrap: wrap;
+    background-color: #3f5a7a; /* Color de fondo azul oscuro/gris */
+    padding: 1rem 1.5rem;
+    justify-content: flex-end; /* Alinear el menú a la derecha */
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    box-sizing: border-box;
+}
 
-  .nav-list {
+/* 🧭 Contenedor del Menú */
+.navbar-menu {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+
+/* 📑 Lista de Navegación */
+.nav-list {
+    display: flex; /* Muestra los elementos en línea */
+    list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-  }
+    gap: 1.5rem; /* ✨ Espaciado entre los ítems de lista */
+}
 
-  .nav-list li {
-    width: 100%;
-    margin-bottom: 0.6rem;
-  }
+/* 📜 Ítem de Lista (El <li>) - Opcional, solo para referencia */
+.nav-list li {
+    /* No necesita estilos específicos gracias a 'gap' */
+}
 
-  .navbar-item {
-    font-size: 1.1rem; /* Ajustado para móvil */
-    width: 100%;
-    max-width: none;
-    margin-right: 0; /* Elimina el margen de desktop */
-  }
+/* 🔗 Estilo del Enlace (El <a>) */
+.nav-item {
+    color: #ffffff; /* Texto blanco para contraste */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Padding alrededor del texto */
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease-in-out; /* Transición para todos los cambios */
+}
 
-  a {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    text-align: center;
-  }
+/* 🖱️ Efecto Hover */
+.nav-item:hover {
+    background-color: #4a75a3; /* Un color de fondo más suave al pasar el ratón */
+    border-color: #f0f0f0; /* Borde sutil al pasar el ratón */
+    color: #ffffff;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* 📱 Media Query para Móviles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Apilar los enlaces */
+        width: 100%;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+    }
 }
 </style>

@@ -59,7 +59,7 @@ const intereses = ref([
   padding: 0;
   margin: 0;
   font-size: 1.4rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 4px rgba(48, 161, 67, 0.6);
   text-rendering: optimizeLegibility;
 }
 

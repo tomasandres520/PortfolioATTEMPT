@@ -5,14 +5,14 @@ import Instagram from "/src/assets/svg/instagram_icon.svg";
 import Github from"/src/assets/svg/github_icon.svg";
 import Curriculum from "/src/assets/svg/cv_resume_icon.svg";
 //-----------
-const title = "QWERTY1234"
-const description = "Estudiantes de la Universidad Tecnologica Nacional - San Rafael"
-const residencia = " Argentina"
-const presentacion = "Hola, bienvenido a nuestro portfolio grupal de proyectos || Somos la fusion de: 'Codigo Colectivo' y 'Qwerty1234'"
+const title = "Tomás Miguel Andrés"
+const description = "Estudiante de la Universidad Tecnologica Nacional - San Rafael"
+const residencia = " Argentina - Santa Fe"
+const presentacion = "Bienvenido a mi portfolio || Soy parte del team 'Qwerty123' que se fusionó con los integrantes de'Codigo Colectivo' "
 const redesSociales = [
   { id:1, name: "LinkedIn", src: Linkeding, url:"https://linkedin.com/in/tu-perfil", enabled: true },
-  { id:2, name: "Instagram", src: Instagram, url:"https://instagram.com/tu-usuario", enabled: true },
-  { id:3, name: "GitHub", src: Github, url:"https://github.com/HotCode2025/Qwerty123_Segundo_Semestre", enabled: true },
+  { id:2, name: "Instagram", src: Instagram, url:"https://www.instagram.com/tomas.andres520/", enabled: true },
+  { id:3, name: "GitHub", src: Github, url:"https://github.com/tomasandres520", enabled: true },
   { id:4, name: "Curriculum", src: Curriculum, url: "/cv.pdf", enabled: true },
 ]
 </script>
@@ -153,7 +153,7 @@ h3{
 }
 
 h1,h2,h3,h4,p{
-  color: black;
+  color: rgb(255, 255, 255);
   position: relative;
   z-index: 1;
 }
