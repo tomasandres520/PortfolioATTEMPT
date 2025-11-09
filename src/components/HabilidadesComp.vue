@@ -114,12 +114,12 @@ const Habilidades = ref([
   background-color: rgba(241, 245, 243, 0.856);
   padding: 0.6rem;
   border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(2, 151, 151, 0.963);
+  box-shadow: 0px 4px 12px rgba(235, 148, 227, 0.963);
   min-width: 0; /* ✅ Evita desbordamiento de texto */
 }
 
 .skill:hover {
-  background-color: rgba(2, 151, 151, 0.963);
+  background-color: rgba(214, 132, 190, 0.963);
   border-radius: 12px;
   font-size: 1.1em;
   color: white;

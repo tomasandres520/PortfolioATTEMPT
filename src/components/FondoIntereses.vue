@@ -12,7 +12,7 @@
   z-index: 0;
 
   /* 🌊 Gradiente animado: azul UTN + cian Evervault */
-  background: linear-gradient(125deg, #0c4a6e, #0f766e, #0ea5e9, #8b5cf6);
+  background: linear-gradient(125deg, #050b0f, #190f76, #e9780e, #1c0258);
   background-size: 300% 300%;
 
   /* ✨ Animación sutil de flujo */

@@ -1,7 +1,6 @@
 <script setup>
 //IMAGENES
-import Ventas from "/src/assets/svg/Ventas.svg"
-import Eccomerce from "/src/assets/svg/Ecommerce.svg"
+
 import Configuracion from "/src/assets/svg/Configuracion.svg"
 import UiUx from "/src/assets/svg/UiUx.svg"
 import Docker from  "/src/assets/svg/Docker.svg"
@@ -10,23 +9,17 @@ import { ref } from 'vue';
 
 
 const titulo = "Desarrollador Full Stack"
-const fecha = "Enero 2022 - Julio 2024"
+const fecha = "Enero 2023 - Noviembre 2025"
 const listado = ref([
-  {item:1,
-    src: Ventas,
-    parrafo:"Lideré un equipo de 5 desarrolladores en la creación de una plataforma de comercio electrónico que incrementó las ventas en un 35% durante el primer año."},
-  {item:2,
-    src: Eccomerce,
-    parrafo:"Diseñé y desarrollé aplicaciones web utilizando Node.js, React y MongoDB, logrando reducir el tiempo de carga de las páginas en un 50%."},
-  {item:3,
+    {item:1,
     src: Configuracion,
-    parrafo:"Implementé soluciones de autenticación y autorización, mejorando la seguridad del sitio web y reduciendo los intentos de acceso no autorizado en un 20%."},
-  {item:4,
+    parrafo:"Implementé la funcionalidad de registro e inicio de sesión utilizando el storage local para simular una experiencia de usuario segura, sentando las bases para futuras integraciones con bases de datos reales"},
+  {item:2,
     src: UiUx,
-    parrafo:"Colaboré con diseñadores de UX/UI para crear interfaces de usuario atractivas y fáciles de usar, aumentando la satisfacción del cliente en un 15%."},
-  {item:5,
+    parrafo:"Trabajé en la refactorización de los estilos de la aplicación, separando el CSS del HTML para crear componentes visuales más limpios y un código más fácil de mantener en el futuro"},
+  {item:3,
     src:Docker,
-    parrafo:"Automaticé procesos de despliegue continuo utilizando Jenkins y Docker, reduciendo los tiempos de despliegue en un 40%."},
+    parrafo:"Utilicé Git y GitHub para gestionar los cambios en el código de mi proyecto, completando el primer despliegue funcional de la página web utilizando servicios de alojamiento gratuitos como GitHub Pages o Netlify."},
 
   ])
 
@@ -53,17 +46,17 @@ const listado = ref([
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: rgb(28, 41, 52);
+  background-color: rgb(0, 77, 73);
   border-radius: 15px;
   font-size: 18px;
 }
 .titulo{
-  font-size: 1.5rem;
-  color: coral;
+  font-size: 2.5rem;
+  color: rgb(196, 97, 230);
 }
 .fecha{
-  font-size: 1rem;
-  color: burlywood;
+  font-size: 1.5rem;
+  color: rgb(161, 97, 145);
   margin-bottom: 1rem;
 }
 .listado{
@@ -79,7 +72,7 @@ const listado = ref([
 }
 
 p{
-  color: wheat;
+  color: rgb(191, 179, 245);
   text-rendering: optimizeLegibility;
 }
 

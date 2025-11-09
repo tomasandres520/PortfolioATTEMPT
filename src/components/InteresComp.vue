@@ -3,10 +3,13 @@ import { ref } from 'vue';
 import FondoIntereses from './FondoIntereses.vue';
 
 const intereses = ref([
-  "Desarrollo de Software de Código Abierto: Contribuyo a proyectos GitHub, colaborando con otros desarrolladores para mejorar herramientas y librerías populares",
-  "Deportes al Aire Libre: Disfruto del senderismo y el ciclismo de montaña, actividades que practico regularmente para mantener un equilibrio entre el trabajo y la vida personal",
-  "Tecnología e Innovación: Me apasiona explorar nuevas tendencias tecnológicas como la inteligencia artificial y el desarrollo de aplicaciones móviles",
-  "Fotografía: Practico la fotografía como un hobby, lo que me ayuda a mantener una perspectiva creativa tanto en mi vida profesional como personal",
+  "Robótica y Proyectos DIY: Disfruto ensamblando y programando microcontroladores (como Arduino o Raspberry Pi) para crear prototipos básicos y automatizar tareas sencillas.",
+
+  "Drones y Tecnología Aérea: Me interesa la tecnología de los drones, enfocándome en aprender sobre su hardware, pilotaje seguro y cómo se aplica la fotografía y el video aéreo.",
+
+  "Boxeo y Disciplina: Practico boxeo como un hobby para mantenerme activo. Este deporte me enseña la importancia de la disciplina, la estrategia y el enfoque, cualidades que aplico en la programación.",
+
+  "Tecnología e Innovación: Me apasiona explorar nuevas tendencias tecnológicas como la inteligencia artificial y el desarrollo de aplicaciones móviles" // Mantengo este de tecnología ya que es amplio.
 ]);
 </script>
 

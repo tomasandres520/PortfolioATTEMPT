@@ -1,15 +1,15 @@
 /* color palette from <https://github.com/vuejs/theme> */
 /*Dejaremos los rot para crear las variables globales del color, yo las dejo por defecto*/
 :root {
-    --vt-c-white: #ffffff;
-    --vt-c-gray-soft: #b6b3b3b6;
-    --vt-c-white-mute: #f2f2f2;
+    --vt-c-white: #09031a;
+    --vt-c-gray-soft: #12003bb6;
+    --vt-c-white-mute: #1a1a1a;
 
     --vt-c-black: #181818;
     --vt-c-black-soft: #222222;
     --vt-c-black-mute: #282828;
 
-    --vt-c-indigo: #5b748d;
+    --vt-c-indigo: #2261a0;
 
     --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
     --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -135,5 +135,5 @@ section h2 {
 }
 
 section h3 {
-    color: rgb(209, 183, 148);
+    color: rgb(22, 255, 14);
 }
